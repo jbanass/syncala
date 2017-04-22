@@ -62,20 +62,24 @@ drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
 ```
 #### Server/Processor Point Of View
 
-`jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala`
-`Client connected from /127.0.0.1:37147`
-` `
-`Client connected from /127.0.0.1:37149`
-` `
-`Printing results now...`
-` `
-`Processing finished cleaning up...`
-` `
-`Ready for new clients...`
+```
+jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala
+Client connected from /127.0.0.1:37147
+
+Client connected from /127.0.0.1:37149
+
+Printing results now...
+
+Processing finished cleaning up...
+
+Ready for new clients...
+```
 
 #### Client Point Of View
 
 ##### Source
+
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37147
 ATTENTION SOURCE
@@ -102,9 +106,10 @@ FILES NOT COMPARED : SOURCE :
 FILES NOT COMPARED : TARGET :
 
 jbanass@ubuntu:~/Desktop$ 
+```
 
-
-***** Target
+##### Target
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37149
 ATTENTION TARGET
@@ -131,10 +136,11 @@ FILES NOT COMPARED : SOURCE :
 FILES NOT COMPARED : TARGET :
 
 jbanass@ubuntu:~/Desktop$ 
-*** Directories are not the same
+```
+### Directories are not the same
 
 This example is using two files : The source will use test...
-
+```
 drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo
 drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
 -rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip
@@ -149,9 +155,9 @@ drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
 -rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#
 -rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~
 -rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop
-
+```
 and the target will use test in the previous directory...
-
+```
 drwxr-xr-x 22 jbanass jbanass  4096 Nov 15 12:43 .
 drwxr-xr-x  3 root    root     4096 Sep 11 14:24 ..
 -rw-------  1 jbanass jbanass 22091 Nov 14 23:13 .bash_history
@@ -188,9 +194,9 @@ drwx------  4 jbanass jbanass  4096 Oct 11 19:24 .thumbnails
 -rw-------  1 jbanass jbanass  4522 Nov  9 12:28 .viminfo
 -rw-------  1 jbanass jbanass    44 Nov 15 09:46 .Xauthority
 -rw-------  1 jbanass jbanass   364 Nov 15 09:46 .xsession-errors
-
-**** Server/Processor Point Of View
-
+```
+#### Server/Processor Point Of View
+```
 jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala
 Client connected from /127.0.0.1:37151
 
@@ -205,12 +211,12 @@ Printing results now...
 Processing finished cleaning up...
 
 Ready for new clients...
-
+```
 
 #### Client Point Of View
 
 ##### Source
-
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37151
 ATTENTION SOURCE
@@ -284,8 +290,9 @@ drwxrwxr-x 2 jbanass jbanass 4096 Nov 2 11:23 target
 -rw-rw-r-- 1 jbanass jbanass 2119 Nov 8 19:48 test~
 -rw------- 1 jbanass jbanass 4522 Nov 9 12:28 .viminfo
 jbanass@ubuntu:~/Desktop$ 
+```
 ##### Target
-
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 ../test
 You are client h-127.0.0.1-37153
 ATTENTION TARGET
@@ -395,9 +402,9 @@ drwxrwxr-x 7 jbanass jbanass      4096 Oct 31 20:21 examples
 -rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 TestTarget
 -rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~
 -rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop
-
+```
 ### Server/Processor Point Of View
-
+```
 jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala
 Client connected from /127.0.0.1:37159
 
@@ -409,10 +416,11 @@ Printing results now...
 Processing finished cleaning up...
 
 Ready for new clients...
-
+```
 ### Client Point Of View
 
 #### Source
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37159
 ATTENTION SOURCE
@@ -478,7 +486,7 @@ FILES NOT COMPARED : TARGET :
 
 total : 1437
 jbanass@ubuntu:~/Desktop$
-
+```
 ## Unsuccessful Comparisons
 
 This section will specifically show a client error (like mistyping a file name
@@ -486,20 +494,24 @@ or trying to connect when a server does not exist)
 ### Client Errors
 #### Server Not Up Error
 ##### Server/Processor Point Of View
-      No output available, since server is not up
+      `No output available, since server is not up`
 ##### Client Point Of View
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 Sorry, something went wrong. Please try again! Perhaps the server isn't up?
 jbanass@ubuntu:~/Desktop$ 
+```
 #### Incorrect filename Error
 ##### Server/Processor Point Of View
-jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala
+`jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala`
 
 ##### Client Point Of View
-Only one Point Of View available for this test:
+`Only one Point Of View available for this test:`
 
 ###### Source
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test123
 Sorry, file does not exist
 
 jbanass@ubuntu:~/Desktop$
+```
