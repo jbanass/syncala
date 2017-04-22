@@ -21,13 +21,13 @@ have Java, Scala, and Internet capabilities.
 Syncala requires a system that will act as the "Client" to have directory
 information obtained by the following command :
 
-[ ls -a -l > *filename* ] 
+`[ ls -a -l > *filename* ]`
 
 where *filename* is a name of your choosing, as well as a special script
 to surpass the abilities of netcat called Send, also programmed in Scala,
 that is callable via terminal :
 
-[ ./send.scala *machinename* *port* *filename* ]
+`[ ./send.scala *machinename* *port* *filename* ]`
 
 where *machinename* is localhost or an IP address, *port* is the port in which
 Syncala is listening (typically port 7000), and *filename* being the path
@@ -40,40 +40,42 @@ This area will show an example of a successful comparison divided into
 two subsections, and each subsection will have a clients point of view, 
 and a server point of view.
 
-*** Directories are the same
+### Directories are the same
 
 For this example, the clients will be using a file called test
 which contains the following output:
 
-drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo
-drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
--rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip
--rw-rw-r-- 1 jbanass jbanass       765 Sep 11 21:05 home.desktop
--rw-rw-r-- 1 jbanass jbanass 160872342 Sep 11 21:07 jdk-8u20-linux-x64.tar.gz
--rw-rw-r-- 1 jbanass jbanass   7812369 Nov 13 16:07 monster.jar
--rw-rw-r-- 1 jbanass jbanass       508 Sep 11 21:05 root.desktop
--rw------- 1 jbanass jbanass       310 Oct 19 21:08 rxvt-unicode.desktop
--rwxrwxr-x 1 jbanass jbanass      1023 Nov 13 21:52 send.scala
--rwxrwxr-x 1 jbanass jbanass      1121 Nov 13 10:32 send.scala~
--rw-rw-r-- 1 jbanass jbanass         0 Nov 15 13:15 test
--rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#
--rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~
--rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop
+`drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo`
+`drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples`
+`-rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip`
+`-rw-rw-r-- 1 jbanass jbanass       765 Sep 11 21:05 home.desktop`
+`-rw-rw-r-- 1 jbanass jbanass 160872342 Sep 11 21:07 jdk-8u20-linux-x64.tar.gz`
+`-rw-rw-r-- 1 jbanass jbanass   7812369 Nov 13 16:07 monster.jar`
+`-rw-rw-r-- 1 jbanass jbanass       508 Sep 11 21:05 root.desktop`
+`-rw------- 1 jbanass jbanass       310 Oct 19 21:08 rxvt-unicode.desktop`
+`-rwxrwxr-x 1 jbanass jbanass      1023 Nov 13 21:52 send.scala`
+`-rwxrwxr-x 1 jbanass jbanass      1121 Nov 13 10:32 send.scala~`
+`-rw-rw-r-- 1 jbanass jbanass         0 Nov 15 13:15 test`
+`-rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#`
+`-rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~`
+`-rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop`
 
-**** Server/Processor Point Of View
-jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala
-Client connected from /127.0.0.1:37147
+#### Server/Processor Point Of View
 
-Client connected from /127.0.0.1:37149
+`jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala`
+`Client connected from /127.0.0.1:37147`
+` `
+`Client connected from /127.0.0.1:37149`
+` `
+`Printing results now...`
+` `
+`Processing finished cleaning up...`
+` `
+`Ready for new clients...`
 
-Printing results now...
+#### Client Point Of View
 
-Processing finished cleaning up...
-
-Ready for new clients...
-**** Client Point Of View
-
-***** Source
+##### Source
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37147
 ATTENTION SOURCE
