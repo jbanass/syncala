@@ -366,10 +366,11 @@ drwxrwxr-x 2 jbanass jbanass 4096 Nov 2 11:23 target
 -rw-rw-r-- 1 jbanass jbanass 2119 Nov 8 19:48 test~
 -rw------- 1 jbanass jbanass 4522 Nov 9 12:28 .viminfo
 jbanass@ubuntu:~/Desktop$ 
-*** Sizes are different
+```
+### Sizes are different
 
 This example will use two files, test...
-
+```
 drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo
 drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
 -rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip
@@ -384,9 +385,9 @@ drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
 -rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#
 -rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~
 -rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop
-
+```
 and test2...
-
+```
 total : 1437
 drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo
 drwxrwxr-x 7 jbanass jbanass      4096 Oct 31 20:21 examples
@@ -452,9 +453,9 @@ FILES NOT COMPARED : TARGET :
 
 total : 1437
 jbanass@ubuntu:~/Desktop$
-
-**** Target
-
+```
+#### Target
+```
 jbanass@ubuntu:~/Desktop$ ./send.scala localhost 7000 test
 You are client h-127.0.0.1-37161
 ATTENTION TARGET
