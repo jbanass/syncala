@@ -12,7 +12,7 @@ what files need to be synced in relation to size and date modified, then ends
 their connection for another pair of clients to begin a session.
 
 # Requirements
-** Server Requirements
+## Server Requirements
 Syncala requires a system that hosts the "Server" and "Processor" actors to
 have Java, Scala, and Internet capabilities.
 
@@ -44,22 +44,22 @@ and a server point of view.
 
 For this example, the clients will be using a file called test
 which contains the following output:
-
-`drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-0940-banassjo`
-`drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples`
-`-rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip`
-`-rw-rw-r-- 1 jbanass jbanass       765 Sep 11 21:05 home.desktop`
-`-rw-rw-r-- 1 jbanass jbanass 160872342 Sep 11 21:07 jdk-8u20-linux-x64.tar.gz`
-`-rw-rw-r-- 1 jbanass jbanass   7812369 Nov 13 16:07 monster.jar`
-`-rw-rw-r-- 1 jbanass jbanass       508 Sep 11 21:05 root.desktop`
-`-rw------- 1 jbanass jbanass       310 Oct 19 21:08 rxvt-unicode.desktop`
-`-rwxrwxr-x 1 jbanass jbanass      1023 Nov 13 21:52 send.scala`
-`-rwxrwxr-x 1 jbanass jbanass      1121 Nov 13 10:32 send.scala~`
-`-rw-rw-r-- 1 jbanass jbanass         0 Nov 15 13:15 test`
-`-rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#`
-`-rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~`
-`-rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop`
-
+```
+drwxrwxr-x 6 jbanass jbanass      4096 Nov 13 15:37 csc376-940-banassjo
+drwxrwxr-x 7 jbanass jbanass      4092 Nov 16 20:21 examples
+-rw-rw-r-- 1 jbanass jbanass     48772 Oct 31 20:19 examples.zip
+-rw-rw-r-- 1 jbanass jbanass       765 Sep 11 21:05 home.desktop
+-rw-rw-r-- 1 jbanass jbanass 160872342 Sep 11 21:07 jdk-8u20-linux-x64.tar.gz
+-rw-rw-r-- 1 jbanass jbanass   7812369 Nov 13 16:07 monster.jar
+-rw-rw-r-- 1 jbanass jbanass       508 Sep 11 21:05 root.desktop
+-rw------- 1 jbanass jbanass       310 Oct 19 21:08 rxvt-unicode.desktop
+-rwxrwxr-x 1 jbanass jbanass      1023 Nov 13 21:52 send.scala
+-rwxrwxr-x 1 jbanass jbanass      1121 Nov 13 10:32 send.scala~
+-rw-rw-r-- 1 jbanass jbanass         0 Nov 15 13:15 test
+-rw-rw-r-- 1 jbanass jbanass       934 Nov 15 13:04 #test#
+-rw-rw-r-- 1 jbanass jbanass       922 Nov 15 13:12 test~
+-rw-rw-r-- 1 jbanass jbanass       472 Sep 11 21:05 tmp.desktop
+```
 #### Server/Processor Point Of View
 
 `jbanass@ubuntu:~/Desktop/csc376-0940-banassjo$ ./target/start csp.net.Syncala`
